@@ -1,10 +1,14 @@
-import commentsReducer from './commentsReducer';
-import { $$initialState as $$commentsState } from './commentsReducer';
+import rosterReducer from './rosterReducer';
+import currentCharacterReducer from './currentCharacterReducer';
+import { initialState as rosterState } from './rosterReducer';
+import { initialState as currentCharacterState } from './currentCharacterReducer';
 
 export default {
-  $$commentsStore: commentsReducer,
+  rosterStore: rosterReducer,
+  currentCharacterStore: currentCharacterReducer,
 };
 
-export const initalStates = {
-  $$commentsState,
+export const initialStates = {
+  rosterState,
+  currentCharacterState
 };

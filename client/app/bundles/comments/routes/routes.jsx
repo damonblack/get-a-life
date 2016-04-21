@@ -1,23 +1,12 @@
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 import Layout from '../layout/Layout';
-import TestReactRouter from '../components/TestReactRouter/TestReactRouter';
-import TestReactRouterRedirect from '../components/TestReactRouterRedirect/TestReactRouterRedirect';
-import RouterCommentsContainer from '../containers/RouterCommentsContainer';
+import Roster from '../containers/Roster';
+import Play from '../containers/Play';
 
 export default (
-  <Route path="/" component={Layout}>
-    <IndexRoute
-      component={RouterCommentsContainer}
-    />
-    <Route
-      path="react-router"
-      component={TestReactRouter}
-    />
-    <Route
-      path="react-router/redirect"
-      component={TestReactRouterRedirect}
-      onEnter={TestReactRouterRedirect.checkAuth}
-    />
+  <Route path="/characters" component={Layout}>
+      <IndexRoute component={Roster} />
+      <Route path=":id" component={Play} />
   </Route>
 );
