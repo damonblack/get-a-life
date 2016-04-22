@@ -9,6 +9,5 @@ export default {
 };
 
 export const initialStates = {
-  rosterState,
-  currentCharacterState
+  $$commentsState,
 };
