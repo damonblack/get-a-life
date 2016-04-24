@@ -15,6 +15,22 @@ export default class Layout extends BaseComponent {
       <section>
         <header>
           <ul>
+            <li>
+              <IndexLink to="/" activeClassName="active">
+                Comments (Root URL)
+              </IndexLink>
+            </li>
+            <li>
+              <Link to="/react-router" activeClassName="active">
+                Test React Router ('/react-router')
+              </Link>
+            </li>
+            <li>
+              <Link to="/react-router/redirect" activeClassName="active">
+                Test Redirect
+                (url to '/react-router/redirect' which goes to root '/')
+              </Link>
+            </li>
           </ul>
         </header>
         {this.props.children}

@@ -15,7 +15,7 @@ export default class CurrentStep extends BaseComponent {
   _renderResolution(step) {
     switch(step.get('stepType')) {
       case 'choice':
-        return (<Choice choices={step.get('choices')} limit={step.get('limit')} />);
+        return (<Choice options={step.get('options')} limit={step.get('limit')} />);
       case 'event':
         return (<Event />);
       default:

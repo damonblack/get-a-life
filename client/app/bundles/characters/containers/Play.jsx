@@ -23,10 +23,12 @@ function loadCurrentCharacter(state, ownProps) {
 let life = Immutable.fromJS({
   id: 0,
   currentStep: {
+    stepId: '#CulturalSkillChoice',
     title: 'Choose your cultural skills.',
     intro: 'Based on your education level of 11 you can choose 4 skills from the following:',
     stepType: 'choice',
-    choices: [
+    limit: 4,
+    options: [
       'Admin 0',
       'Animals 0',
       'Art 0',
@@ -45,7 +47,6 @@ let life = Immutable.fromJS({
       'Medic 0',
       'Profession 0',
     ],
-    limit: 4
   }
 });
 

@@ -15,6 +15,7 @@ export default class Layout extends BaseComponent {
       <section>
         <header>
           <ul>
+            <li>What?</li>
           </ul>
         </header>
         {this.props.children}

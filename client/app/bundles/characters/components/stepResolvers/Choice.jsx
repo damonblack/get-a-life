@@ -9,8 +9,8 @@ export default class Choice extends BaseComponent {
     super(props, context);
 
     this.state = {
-      availableChoices: this.props.choices.toJS(),
-      selectedChoices: []
+      availableOptions: this.props.options.toJS(),
+      selectedOptions: []
     };
 
     _.bindAll(this, ['_select', '_deSelect']);
@@ -18,22 +18,22 @@ export default class Choice extends BaseComponent {
 
   _select(e) {
     let choice = e.target.innerHTML
-    if (this.state.selectedChoices.length < this.props.limit &&
-      _.includes(this.state.availableChoices, choice)) {
+    if (this.state.selectedOptions.length < this.props.limit &&
+      _.includes(this.state.availableOptions, choice)) {
 
       this.setState({
-        availableChoices: _.without(this.state.availableChoices, choice),
-        selectedChoices: _.concat(this.state.selectedChoices, choice)
+        availableOptions: _.without(this.state.availableOptions, choice),
+        selectedOptions: _.concat(this.state.selectedOptions, choice)
       });
     }
   }
 
   _deSelect(e) {
     let choice = e.target.innerHTML
-    if (_.includes(this.state.selectedChoices, choice)) {
+    if (_.includes(this.state.selectedOptions, choice)) {
       this.setState({
-        selectedChoices: _.without(this.state.selectedChoices, choice),
-        availableChoices: _.sortBy(_.concat(this.state.availableChoices, choice))
+        selectedOptions: _.without(this.state.selectedOptions, choice),
+        availableOptions: _.sortBy(_.concat(this.state.availableOptions, choice))
       });
     }
 
@@ -44,14 +44,14 @@ export default class Choice extends BaseComponent {
     return (
       <div>
         <div className="selected-skills">
-          { this.state.selectedChoices.map((choice) => {
+          { this.state.selectedOptions.map((choice) => {
             return (<span key={choice} onClick={this._deSelect}>{choice}</span>);
           })}
         </div>
         <hr />
         <button>Submit</button>
         <div>
-          { this.state.availableChoices.map((choice) => {
+          { this.state.availableOptions.map((choice) => {
             return (<div key={choice} onClick={this._select}>{choice}</div>);
           })}
         </div>
