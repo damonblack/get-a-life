@@ -1,7 +1,0 @@
-<div class="life-list-item">
-<h2><%= character.character_sheet[:name] || 'Name: ' %></h2>
-<% character.character_sheet["attributes"].each do |key, value| %>
-  <span><%= "#{key}:#{value}" %></span>
-<% end %>
-<%= button_to 'Edit', edit_character_path(character.id), method: :get %>
-</div>

@@ -28,10 +28,6 @@ class CharactersController < ApplicationController
     @characters = current_user.characters
   end
 
-  def edit
-    @character = current_user.characters.find(params[:id])
-  end
-
   private
 
   def character_params

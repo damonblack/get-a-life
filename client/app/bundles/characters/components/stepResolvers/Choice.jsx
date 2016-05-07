@@ -1,5 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
+import css from './Choice.scss';
 
 import BaseComponent from '../../../../libs/components/BaseComponent';
 
@@ -43,9 +44,9 @@ export default class Choice extends BaseComponent {
   render() {
     return (
       <div>
-        <div className="selected-skills">
+        <div className={css.selected_skills}>
           { this.state.selectedOptions.map((choice) => {
-            return (<span key={choice} onClick={this._deSelect}>{choice}</span>);
+            return (<span key={choice} className={css.chosen} onClick={this._deSelect}>{choice}</span>);
           })}
         </div>
         <hr />
