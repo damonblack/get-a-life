@@ -13,12 +13,17 @@ export default {
     return (
       this._doPost('PUT', `/characters/${characterId}.json`, {character: data})
     );
-
   },
 
   deleteCharacter(characterId) {
     return (
       this._doPost('DELETE', `/characters/${characterId}.json`)
+    );
+  },
+
+  nextTurn(characterId, answers) {
+    return (
+      this._doPost('PUT', `/characters/${characterId}/turn.json`, {answers: answers})
     );
   },
 

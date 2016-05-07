@@ -15,6 +15,8 @@ Rails.application.routes.draw do
 
   resources :characters
 
+  put '/characters/:character_id/turn' => 'life#turn'
+
   # React Router needs a wildcard
   get "react-router(/*all)", to: "welcome#index"
 
