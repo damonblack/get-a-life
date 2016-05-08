@@ -10,12 +10,13 @@ gem "listen"
 gem "sqlite3", group: [:development, :test]
 
 group :production do
-  # Pg is used for Heroku
-  gem "pg"
   gem "rails_12factor" # Never include this for development or tests
 end
 
 gem "puma"
+
+#postgresql db client
+gem "pg"
 
 # Use SCSS for stylesheets
 gem "sass-rails"
@@ -36,7 +37,7 @@ gem "jbuilder"
 gem "sdoc", group: :doc
 
 # Use ActiveModel has_secure_password
-# gem "bcrypt", "~> 3.1.7"
+gem "bcrypt", "~> 3.1.7"
 
 # Use Rails Html Sanitizer for HTML sanitization
 gem "rails-html-sanitizer"

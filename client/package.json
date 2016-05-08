@@ -85,7 +85,8 @@
     "style-loader": "^0.13.1",
     "turbolinks": "^5.0.0-beta4",
     "url-loader": "^0.5.7",
-    "webpack": "^1.12.15"
+    "webpack": "^1.13.0",
+    "webpack-sources": "^0.1.2"
   },
   "devDependencies": {
     "babel-plugin-react-transform": "^2.0.2",
