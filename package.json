@@ -1,7 +1,7 @@
 {
-  "name": "react-webpack-rails-tutorial",
-  "version": "1.1.1",
-  "description": "Code from the React Webpack tutorial.",
+  "name": "get-a-life",
+  "version": "0.0.1",
+  "description": "Web app for generating rpg character back-stories and offstage events",
   "main": "server-express.js",
   "engines": {
     "node": "5.0.0",

@@ -1,4 +1,4 @@
-import * as actionTypes from '../constants/rosterConstants';
+import * as actionTypes from '../constants/charactersConstants';
 import requestManager from '../../../libs/requestManager';
 
 
@@ -35,6 +35,23 @@ export function deleteCharacter(characterId) {
       requestManager
         .deleteCharacter(characterId)
         .then(res => dispatch(createCharactersSuccess(res.data)))
+    );
+  };
+}
+
+export function submitResponseSuccess(data) {
+  return {
+    type: actionTypes.PROCESS_TURN_SUCCESS,
+    roster: data.characters,
+  };
+}
+
+export function submitResponse(characterId, answer) {
+  return dispatch => {
+    return (
+      requestManager
+        .submitResponse(characterId, answer)
+        .then(res => dispatch(submitResponseSuccess(res.data)))
     );
   };
 }

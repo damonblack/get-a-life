@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import * as charactersActionCreators from '../actions/rosterActionCreators';
+import * as charactersActionCreators from '../actions/charactersActionCreators';
 import AttributesRow from '../components/AttributesRow'
 import NameEditor from '../components/NameEditor';
 import Journal from '../components/Journal';
@@ -67,10 +67,10 @@ class Play extends BaseComponent {
 
     return (
       <div>
-        <NameEditor name={characterSheet.get('name')} updateName={actions.updateCharacter.bind(this, character.get('id'))}/>
+        <NameEditor name={characterSheet.get('name')} updateName={actions.updateCharacter.bind(null, character.get('id'))}/>
         <AttributesRow attrs={characterSheet.get('attributes')} />
         <AttributesRow attrs={characterSheet.get('skills')} />
-        <Journal life={life} />
+        <Journal life={life} submitResponse={actions.submitResponse.bind(null, character.get('id'))}/>
       </div>
     );
   }

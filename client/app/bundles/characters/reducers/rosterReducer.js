@@ -1,7 +1,7 @@
 /* eslint new-cap: 0 */
 
 import Immutable from 'immutable';
-import * as actionTypes from '../constants/rosterConstants';
+import * as actionTypes from '../constants/charactersConstants';
 
 export const initialState = Immutable.fromJS({
   roster: [],

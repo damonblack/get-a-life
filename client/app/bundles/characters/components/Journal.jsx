@@ -13,7 +13,7 @@ export default class AttributesRow extends BaseComponent {
   render() {
     return (
       <div>
-        <CurrentStep step={this.props.life.get('currentStep')}/>
+        <CurrentStep step={this.props.life.get('currentStep')} submitResponse={this.props.submitResponse}/>
       </div>
     );
   }

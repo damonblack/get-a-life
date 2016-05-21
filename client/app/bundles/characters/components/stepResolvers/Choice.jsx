@@ -14,7 +14,7 @@ export default class Choice extends BaseComponent {
       selectedOptions: []
     };
 
-    _.bindAll(this, ['_select', '_deSelect']);
+    _.bindAll(this, ['_select', '_deSelect', '_submitResponse']);
   }
 
   _select(e) {
@@ -40,6 +40,9 @@ export default class Choice extends BaseComponent {
 
   }
 
+  _submitResponse(e) {
+    this.props.submitResponse(this.state.selectedOptions)
+  }
 
   render() {
     return (
@@ -50,7 +53,7 @@ export default class Choice extends BaseComponent {
           })}
         </div>
         <hr />
-        <button>Submit</button>
+        <button onClick={this._submitResponse}>Submit</button>
         <div>
           { this.state.availableOptions.map((choice) => {
             return (<div key={choice} onClick={this._select}>{choice}</div>);

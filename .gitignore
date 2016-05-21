@@ -23,6 +23,7 @@ npm-debug.log*
 # Ignore bundle dependencies
 vendor/ruby
 
+.byebug_history
 # RVM gemset
 .ruby-gemset
 

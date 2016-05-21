@@ -21,9 +21,9 @@ export default {
     );
   },
 
-  nextTurn(characterId, answers) {
+  submitResponse(characterId, answer) {
     return (
-      this._doPost('PUT', `/characters/${characterId}/turn.json`, {answers: answers})
+      this._doPost('PUT', `/characters/${characterId}/turn.json`, {answer: answer})
     );
   },
 
@@ -51,8 +51,5 @@ export default {
   _getCSRFToken() {
     return _.find(document.querySelectorAll('meta'), ['name', 'csrf-token']);
   }
-
-
-
 
 };

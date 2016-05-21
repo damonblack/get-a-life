@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import CharacterSheet from '../components/CharacterSheet';
 import { bindActionCreators } from 'redux';
-import * as rosterActionCreators from '../actions/rosterActionCreators';
+import * as rosterActionCreators from '../actions/charactersActionCreators';
 
 import BaseComponent from '../../../libs/components/BaseComponent';
 
