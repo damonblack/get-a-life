@@ -5,8 +5,4 @@ ReactOnRails.setOptions({
   traceTurbolinks: TRACE_TURBOLINKS, // eslint-disable-line no-undef
 });
 
-ReactOnRails.register(
-  {
-    App,
-  }
-);
+ReactOnRails.register( { App } );

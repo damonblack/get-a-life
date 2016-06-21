@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :worlds
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   # Serve websocket cable requests in-process
@@ -13,12 +14,10 @@ Rails.application.routes.draw do
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
 
-  resources :characters
-
   put '/characters/:character_id/turn' => 'life#turn'
+  put '/characters/:id' => 'characters#update'
+  post '/characters' => 'characters#create'
 
   # React Router needs a wildcard
-  get "react-router(/*all)", to: "welcome#index"
-
-  resources :comments
+  get "characters(/*all)", to: "characters#index"
 end

@@ -1,4 +1,4 @@
-class Character < ActiveRecord::Base
+class Character < ApplicationRecord
   belongs_to :user
 
   default_scope { order('created_at ASC') }

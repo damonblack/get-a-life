@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>RailsReactTutorial</title>
+  <title>Get a Life</title>
 
   <%= env_stylesheet_link_tag(static: 'application_static',
                               hot: 'application_non_webpack',
@@ -24,6 +24,8 @@
   <div class="container">
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
+        <li><%= link_to 'Create a World', new_world_path %></li>
+        <li><%= link_to 'Get a Life', worlds_path %></li>
       <% if current_user %>
         <li><%= current_user.name%></li>
         <li><%= link_to 'logout', '/logout' %></li>
