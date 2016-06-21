@@ -13,7 +13,7 @@ hot-assets: sh -c 'rm app/assets/webpack/* || true && HOT_RAILS_PORT=3500 npm ru
 rails-static-client-assets: sh -c 'npm run build:dev:client'
 
 # Render static client assets. Remove if not server rendering
-rails-static-server-assets: sh -c 'npm run build:dev:server'
+# rails-static-server-assets: sh -c 'npm run build:dev:server'
 
 # Run an express server if you want to mock out your endpoints. No Rails involved!
 # Disable this if you are not using it.
